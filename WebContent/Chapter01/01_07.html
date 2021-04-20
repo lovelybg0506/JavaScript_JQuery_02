@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var name1="test1";	// 전역변수
+	function func1(){	
+		var name="test2";	// 함수 안에 있는 var name은 각각의 지역변수이다.
+		document.write("2.name="+name,"<br>");
+	}
+
+	function func2(){
+		var name="test3";
+		document.write("3.name="+name,"<br>");
+		document.write("name1="+name1,"<br>");
+	}
+
+	function func3(){
+		name="test20"; // 여기에는 var선언이 안되어있기때문에 전역변수를 뜻함.
+		document.write("4.name="+name,"<br>");
+	}
+	
+
+	document.write("1.name="+name1,"<br>");
+	func1();
+	func2();
+	func3();
+	document.write("5.name="+name,"<br>"); // (전역변수가 교체된 후)5.name= test20이 출력된다.
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

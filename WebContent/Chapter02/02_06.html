@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function hello(name) {
+		alert(name + "님 환영합니다.");
+	}
+
+	hello("홍길동");
+	
+	var hello2=new Function("name","alert(name+'님 환영합니다.');"); //new Function 함수객체생성
+	hello2("홍길동2");						// 바깥쪽이 큰따옴표로 감싸줄때에는 안쪽은 작은따옴표로 감싼다.
+</script>
+</head>
+<body>
+
+</body>
+</html>

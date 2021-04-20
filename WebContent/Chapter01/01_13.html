@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	/* function sample(){
+	var sum=0;
+	while(value!=0){
+		var value = window.prompt("수 입력",1);
+			sum = sum + value;
+		if(value==0){
+			for(i=0; i<value.length; i++){
+			document.write((i+1)+". "+sum+"<br>");
+						
+			}
+			document.write("종료합니다.");
+			document.write("총 "+i+"번 실행했습니다.")
+		}
+	}
+}
+	sample();
+	*/
+	
+	function sample(){
+		var sum=0;
+		var count=0;
+		while(true){
+			var value=parseInt(window.prompt("수 입력",1));
+			if(value==0){
+				document.write("종료합니다.","<br>");
+				break;
+			}
+			sum+=value;
+			count++;
+			document.write(count+"."+sum+"<br>");
+		}
+		document.write("총"+count+"번 실행했습니다.");
+	}
+	sample();
+	
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

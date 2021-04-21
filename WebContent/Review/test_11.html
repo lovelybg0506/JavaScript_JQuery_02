@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+ * 	내부 함수 : 함수안에 또다른 함수
+ */
+ 
+	 function outFun(width,height){
+		 console.log("triangle: "+triangle());
+		 console.log("quadrangle: "+quadrangle());
+		 
+		 function triangle(){
+			 
+			 return (width*height)/2;
+		 }
+		 
+		 function quadrangle(){
+			 
+			 return width*height;
+		 }
+	 }
+ 
+ 	outFun(3,5);
+ 	
+//	triangle();		내부함수는 직접 호출할 수 없다.
+</script>
+</head>
+<body>
+
+</body>
+</html>

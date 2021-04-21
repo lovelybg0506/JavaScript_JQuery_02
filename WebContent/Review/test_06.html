@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">	/* 재귀함수 = 자기 자신을 호출하는 함수, 긴급종료if문,return이 있어야함*/
+	var num=0; //전역변수라서 함수에서 계속 증가되어 출력됨
+	
+	function testFnc(){
+		/* var num=0; */	//지역변수라서 1,1,1,1,1
+		num++;
+		document.write(num,"<br>");
+		if(num==10)
+			return;
+		testFnc();
+	}	// 함수는 모두 호출된 후 메모리에서 없어진다.
+
+	testFnc();
+</script>
+</head>
+<body>
+
+</body>
+</html>

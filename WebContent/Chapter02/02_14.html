@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 
+	클로저(closure)
+	 */
+ 	function createCounter(){
+		var count=0;
+		function addCount(){
+			count++;
+			return count;
+		}
+		return addCount;
+	}
+	 
+	var counter = createCounter();
+	
+	document.write("1.count= "+counter(),"<br>");
+	document.write("2.count= "+counter(),"<br>");
+	document.write("3.count= "+counter(),"<br>");
+	 
+</script>
+</head>
+<body>
+
+</body>
+</html>

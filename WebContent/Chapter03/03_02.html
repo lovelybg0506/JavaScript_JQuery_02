@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*
+		날짜 정보 객체  new Date(); 
+	*/
+
+
+//	var today=new Date();
+
+	var today=new Date(2021,3,22);	// 월을 입력할때 현재 월에서 -1 해서 써야한다 Date객체 자체의 index문제인듯. (1월=0)
+
+/* 	var nowMonth=today.getMonth()+1; // 월 
+	var nowDate=today.getDate(); // 일 
+	var nowDay=today.getDay(); //요일 */ // 일요일 = 0
+
+	 var nowMonth=today.getMonth(),  /*변수를 선언할 때에 int a,b,c*/
+	 nowDate=today.getDate(), 
+	 nowDay=today.getDay(); 
+	
+	document.write("<h1>오늘 날짜 정보</h1>");
+	document.write("현재 월: "+nowMonth,"<br>");
+	document.write("현재 일: "+nowDate,"<br>");
+	document.write("현재 요일: "+nowDay,"<br>");
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

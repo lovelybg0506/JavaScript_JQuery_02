@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var today=new Date();
+	var nowYear=today.getFullYear();
+	
+	var theDate=new Date(nowYear,11,31);
+	var diffDate=theDate.getTime()-today.getTime();
+	var result=Math.ceil(diffDate/(1000*60*60*24));	// Math.ceil(): 소수점 첫째자리에서 무조건
+	document.write("<h1>오늘부터 올해 연말까지 남은 날짜</h1>");
+	document.write("D-day: "+result+"일 남았습니다.","<br>");
+	
+	document.write(nowYear,"<br>");
+	document.write("------------------------------------")
+	document.write("<br>");
+	document.write(today.getTime()); // 1970년 1월1일 이후 현재 밀리초(1000분의1초) 표기
+	document.write("<br>");
+	document.write(theDate.getTime());
+	document.write("<br>");
+	document.write(diffDate);
+	document.write("<br>");
+	document.write(result);	
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

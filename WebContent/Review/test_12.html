@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+ * 		매개변수로 함수를 전달하고 전달된 매개변수가 특정 시점에 호출되는 것
+ */
+	function funName(funCBF,funCBP,num){
+		
+		for(var i=1; i<10; i++){
+			console.log(num+"*"+i+"="+(num*i));
+			if(i<10)
+				funCBP(i);
+		}
+		
+		funCBF();
+		
+	}
+	
+	function funCallBackProgress(n){
+		console.log((n*10)+"% 진행 완료!");
+	}
+	
+	function funCallBackFinish(){
+		console.log("100% 진행 완료!");
+		console.log("서버 작업 종료!");
+	}
+	
+	funName(funCallBackFinish,funCallBackProgress,7);
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -7,18 +7,32 @@
 	var greenArr= ["교대","방배","강남"];
 	var yellowArr= ["미금","정자","수서"];
 
-	greenArr.splice(1,1,"서초","역삼");	// index (시작,삭제 개수,)
-	console.log(greenArr);
+	greenArr.splice(1,1,"서초","역삼");	// [splice]원하는 위치에 요소를 추가하거나 삭제 (1번째 자리부터 시작,1개 삭제후,서초와역삼을 그 자리에 끼워넣음)
+	console.log(greenArr);					
 	
-/* 	var data1=yellowArr.pop();
-	var data2=yellowArr.shift();
+/* 	greenArr.splice(0,0,"2호선","역삼");	//	splice = (0,0,"2호선" 이라고 하면 맨 앞자리에 2호선,교대,방배,강남 )
+	console.log(greenArr);	 */
 	
-	yellowArr.push(data2);
+ 	var data1=yellowArr.pop();// [pop]배열에서 마지막 요소를 제거하고 그 요소를 반환합니다.
+	console.log(data1);
+ 	console.log(yellowArr);
+ 	
+ 	var data2=yellowArr.shift(); //[shift] 는 배열에서 첫 번째 요소를 제거하고, 제거된 요소를 반환. 배열의 길이를 변하게 합니다.
+	console.log(data2);
+ 	console.log(yellowArr);
+	
+	yellowArr.push(data2); //[push]배열의 끝에 하나 이상의 요소를 추가하고, 배열의 새로운 길이를 반환합니다.
 	console.log(yellowArr);
 	
-	yellowArr.unshift(data1);
-	console.log(yellowArr); */
-
+	yellowArr.unshift(data1);//[unshift]새로운 요소를 배열의 맨 앞쪽에 추가하고, 새로운 길이를 반환합니다.
+	console.log(yellowArr); 
+	
+	
+	// 결과창 띄워놓고 천천히 하나씩 해보면 이해가 쉽다.
+/* 	
+	reverse - 배열 요소 순서 반전
+	sort - 배열 요소 정렬 arr.sort(function(a, b) { return a - b; });오름차순 */
+	
 </script>
 </head>
 <body>

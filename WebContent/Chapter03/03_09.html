@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var t="Hello Thank you good luck to you";
+	
+	document.write(t.charAt(16),"<br>"); // index 위치
+	document.write(t.indexOf("you"),"<br>"); // indexOf 시작위치, 못찾을경우;-1
+	document.write(t.indexOf("you",16),"<br>"); // 16:시작위치
+	document.write(t.lastIndexOf("you"),"<br>");// 마지막 you 찾아라
+	document.write(t.lastIndexOf("you",25),"<br>"); // 25번째부터 거꾸로 마지막 you찾아라?
+	document.write(t.match("luck"),"<br>"); // 같은단어
+	document.write(t.search("you"),"<br>"); // 단어 몇번째인지 찾기
+	document.write(t.substr(21,12),"<br>");	// 문자열에서 특정 위치에서 시작하여 특정 문자 수 만큼의 문자들을 반환합니다.
+	document.write(t.substring(6,12),"<br>"); // string 객체의 시작 인덱스로 부터 종료 인덱스 전 까지 문자열의 부분 문자열을 반환합니다. 
+	document.write(t.replace("you","me"),"<br>"); // 자리바꾸기
+	document.write(t.toLowerCase(),"<br>");	// 대소문자
+	document.write(t.toUpperCase(),"<br>");	// 대소문자
+	document.write(t.length,"<br>");	//길이
+
+	var s=t.split(" "); // 공백을 기준으로 자른다
+	document.write(s,"<br>");
+	document.write(s[0],"<br>");
+//	document.write(s[1],"<br>");
+//	document.write(s[2],"<br>");
+//	document.write(s[3],"<br>");
+//	document.write(s[4],"<br>");
+//	document.write(s[5],"<br>");
+//	document.write(s[6],"<br>");
+
+	var str="ABC";
+	var t=str.charCodeAt(0);	// 변수에 저장된 문자열 중 0번째 인덱스, 아스키코드
+	document.write(t,"<br>");
+	document.write(String.fromCharCode(65),"<br>");
+	document.write(String.fromCharCode(66),"<br>");
+	document.write(String.fromCharCode(67),"<br>");
+	document.write(String.fromCharCode(97),"<br>");
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

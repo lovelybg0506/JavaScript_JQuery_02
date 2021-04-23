@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var userMail=prompt("당신의 이메일 주소는?",""); // lovelybg0506@gmail.com
+	var arrUrl=[".co.kr",".com",".net",".or.kr",".go.kr"];
+	
+	var check1=false;
+	var check2=false;
+	
+/* 	var count=0;
+	var pos=0;
+	
+	if(userMail.indexOf("@")>0){
+		while(true){
+			pos = userMail.indexOf("@",pos+1);
+			if(pos > -1)
+			count++;
+		else
+			break;			
+		}
+		if(count==1){
+			check1=true;
+		}
+	}
+		
+	for(var i=0; i<arrUrl.length; i++){
+		if(userMail.indexOf(arrUrl[i]) > 0)
+			check2 = true;
+	} */
+	
+	if(userMail.indexOf("@") > 0){
+		check1=true;
+	}
+	for(var i=0;i<arrUrl.length;i++){
+		if(userMail.indexOf(arrUrl[i])>0){
+			check2=true;
+		}
+	}
+		
+	
+	if(check1 && check2){
+		document.write(userMail);
+	}else{
+		alert("이메일 형식이 잘못됐습니다.")
+	}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

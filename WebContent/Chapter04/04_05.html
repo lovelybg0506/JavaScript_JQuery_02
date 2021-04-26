@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload=function(){
+	var str = "";
+	str += "<p id= 'jsTitle'> JavaScript & Node.js </p>";
+	str += "<img id='logoImg', src='./img/logo.png', ";
+	str += "width='170', height='67'>";
+
+	document.body.innerHTML = str;
+
+	var titleNode = document.getElementById("jsTitle");
+	titleNode.parentNode.removeChild(titleNode); 
+	
+	var logoNode = document.getElementById("logoImg");
+	logoNode.parentNode.removeChild(logoNode);
+	};
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

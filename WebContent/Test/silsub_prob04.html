@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>간이 계산기 만들기</h2>
+    첫번째 값 : <input id=num1><br>
+    두번째 값 : <input id=num2><br>
+
+    <input type="button" value="+" onclick="calculator(value);">
+    <input type="button" value="-" onclick="calculator(value);">
+    <input type="button" value="x" onclick="calculator(value);">
+    <input type="button" value="/" onclick="calculator(value);">
+    <input type="button" value="%" onclick="calculator(value);">
+    계산 결과 : <span id="calc"></span>
+    <hr>
+
+    <script type="text/javascript">
+      function calculator(value){
+        var su1=Number(document.getElementById("num1").value);
+        var su2=Number(document.getElementById("num2").value);
+        var result;
+        
+        switch(value){
+          case "+":
+            result = su1+su2;
+            break;
+          case "-":
+            result = su1-su2;
+            break;
+          case "x":
+            result = su1*su2;
+            break;
+          case "/":
+            result = su1/su2;
+            break;
+          case "%":
+            result = su1%su2;
+            break;
+        }
+        document.getElementById("calc").innerHTML=result;
+
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>배열2</h1>
+    <!-- 결과:"jhlove" -->
+    <fieldset>
+      <legend>보기</legend>
+        <label id="stringla1">h j</label><br>
+        <label id="stringla2">e v o l</label><br>
+    </fieldset>
+    <br>
+    <p style="border:1px solid red;" id="print">정답</p>
+    <button onclick="reverseTest();">처리</button>
+    <script type="text/javascript">
+      function reverseTest(){
+          var stringla1 = document.getElementById("stringla1").innerHTML.split(' ');
+          var stringla2 = document.getElementById("stringla2").innerHTML.split(' ');
+          var data1 = stringla1.reverse(); // j,h
+          var data2 = stringla2.reverse(); // l,o,v,e
+          var arr = data1.concat(data2); // j,h,l,o,v,e 여기있는 반점들은 데이터가 아니고 스스로 생긴것
+          var str = arr.join(''); // 합치는의미 + 
+
+          document.getElementById("print").innerHTML=str;
+        }
+    </script>
+  </body>
+</html>

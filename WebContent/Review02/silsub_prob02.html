@@ -6,7 +6,7 @@
     <style type="text/css">
       div{
         border:1px solid black;
-        background-color:black;
+        background-color:white;
         height:100px;
         width:100px;
       }
@@ -17,12 +17,14 @@
     <div id="div1"></div>
     <input type="color" id="selector">
     <button onclick="changeColor();">변경</button>
+    
 
     <script type="text/javascript">
       function changeColor(){
         var selector = document.getElementById("selector");
         var div1 = document.getElementById("div1");
         div1.style.backgroundColor=selector.value;
+        div2.style.backgroundColor=selector.value;// 아래에있는 div박스도 같이 색 변하게한다
       }
     </script>
     <h3>버튼에 따른 크기 조절</h3>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>배열3</h1>
+    <!-- 출력:사과, 바나나, 복숭아 -->
+    <fieldset>
+      <legend>입력</legend>
+      <input type="text" id="strInput"><button onclick="input()">입력</button>
+      <br>
+      <p style="border:1px solid red;" id="print2">이 부분에 정답이 출력 될 수 있도록 하세요</p>
+    </fieldset>
+    <button onclick="printTest()">출력</button>
+    <script>
+      var arr=new Array();
+
+      function input(){
+        var fruit  = document.getElementById("strInput").value;
+        document.getElementById("strInput").value=" "; //값과 값 사이에 띄어쓰기를 추가
+        arr.push(fruit);
+      }
+
+      function printTest(){
+        var result = document.getElementById("print2");
+        result.innerHTML = arr;
+      }
+    </script>
+  </body>
+</html>

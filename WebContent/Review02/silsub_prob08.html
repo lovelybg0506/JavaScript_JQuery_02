@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>배열</h1>
+      <fieldset>
+        <legend>보기</legend>
+        <label id="stringla4">피자 치킨 당근 햄버거 떡볶이</label>
+        <br>
+      </fieldset>
+    <br>
+      <input type="text" id="remove" size="25" placeholder="삭제할 음식 이름을 입력하세요">
+      <input type="text" id="add" size="25" placeholder="추가할 음식 이름을 입력하세요">
+      <p style="border:1px solid red;" id="print4">이부분에 정답이 출력 될 수 있도록 하세요</p>
+      <button onclick="print2Test();">처리 및 출력</button>
+
+      <script type="text/javascript">
+        function print2Test(){
+          var remove = document.getElementById("remove").value;
+          var add = document.getElementById("add").value;
+          var result = document.getElementById("print4");
+
+          var stringla4 = document.getElementById("stringla4").textContent.split(" ");
+          stringla4.splice(stringla4.indexOf(remove),1);
+          stringla4.push(add);
+          result.innerHTML=stringla4;
+        }
+
+      </script>
+  </body>
+
+</html>

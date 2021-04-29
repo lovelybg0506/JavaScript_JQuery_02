@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#print {
+	height: 100px;
+}
+</style>
+</head>
+<body>
+	입력 받은 정보를 member라는 객체에 저장 후 출력
+	<fieldset>
+		<legend style="color: red;">출력창</legend> <!-- div로 만들어진 테두리에 글씨넣기 -->
+		<div id=print></div>
+	</fieldset>
+	<br>
+	<button onclick="insertMember();">입력</button>
+	<button onclick="printMember();">출력</button>
+
+	<script type="text/javascript">
+			var member;
+		function insertMember() {
+			var name = prompt("이름 입력: ");
+			var age = prompt("나이 입력: ");
+			var addr = prompt("주소 입력: ");
+			
+			 member={
+				name:name,
+				age:age,
+				addr:addr,
+				
+				info:function(){
+					var str="이름:"+this.name+"<br>"+"나이:"+this.age+"세<br>"+"주소:"+this.addr+"<br>";
+					
+					return str;
+				}
+			}
+		}
+
+		function printMember(){
+			
+			if(member == null){
+			alert("입력을 먼저 진행해 주세요");
+			}else{
+				document.getElementById("print").innerHTML=member.info();
+			}
+		}
+	
+	</script>
+</body>
+</html>

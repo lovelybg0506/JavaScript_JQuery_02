@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+	font-size:9pt;
+	font-family:"굴림";
+}
+
+div,p,ul,li{	/* 콤마가 없으면, div p ul (li) div안에 p안에 ul안에 li에만 적용하라는 뜻  */
+	border:1px,#eeeeee solid;
+	margin:10px;
+}
+
+ul{
+	padding:10px;
+}
+
+li.select{
+	background-color:#ccc;
+}
+</style>
+</head>
+<body>
+	<div id="sample" class="page">
+		샘플 페이지(div,id=samplePage, class=page)
+		<div id="header">
+			헤더영역(div, id=header)
+		</div>
+		<div id="content" class="sample-content">
+			노드 찾기(div, id=content, class=sample-content)
+			<ul class="menu">
+				일반 노드 찾기(ul, class=menu)
+				<li data-value="1">id로 찾기(li, data-value=1)</li>
+				<li class="select">tag로 찾기(li, class=select)</li>
+				<li data-value="2">class로 찾기(li, data-value=2)</li>
+				<li class="test1">속성으로 찾기(li, class=test1)</li>
+			</ul>
+		
+		</div>
+	</div>
+</body>
+</html>

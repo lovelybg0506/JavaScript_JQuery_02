@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	window.onload=function(){	//브라우저가 내가 써놓은코드를 쭈욱 해석을하고, 이 함수를 실행시켜라 
+		var menu = document.getElementById("menu");
+		var liList = menu.getElementsByTagName("li"); // 배열로 지정하지않아도 배열형태로 된다.
+		//document.write(liList);
+		//console.log(liList);
+		 for(var i=0; i<liList.length; i++){
+			var li=liList[i];
+			li.style.color="#f00";
+			liList[i].style.color="#f00";
+		}
+		 
+		//menu.style.color="red";
+	}
+</script>
+
+</head>
+<body>
+<ul id="menu">
+	<li>menu1</li>
+	<li>menu2</li>
+	<li>menu3</li>
+	<li>menu4</li>
+	<li>menu5</li>
+</ul>
+</body>
+</html>

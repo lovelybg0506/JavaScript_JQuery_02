@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+	font-size:9pt;
+}
+#panel{
+	width:600px;
+	height:300px;
+	border:1px solid #999;
+	position:relative;
+}
+#bar{
+	position:absolute;
+	left:50px;
+	top:190px;
+	width:500px;
+	height:20px;
+	background:#F30;
+}
+#fish{
+	position:absolute;
+	left:50px;
+	top:120px;
+}
+#nav{
+	text-align:center;
+	width:600px;
+}
+</style>
+<!--  버튼 클릭 물고기 왼쪽에서 오른쪽으로 움직이기  -->
+<script type="text/javascript">
+	window.onload=function(){
+		var fish = document.getElementById("fish");
+		var btn = document.getElementById("btnStart");
+		
+		var left=50;
+		var timerID=0;
+		
+		btnStart.addEventListener("click",function(){
+			timerID=setInterval(function(){
+				left++;
+				fish.style.left=left+"px";
+				
+				if(left >= 430){
+					clearInterval(timerID);
+					timerID=0;
+				}
+			},20);
+		});
+	}
+</script>
+</head>
+<body>
+	<div>
+		<div id="panel">
+			<div id="bar"></div>
+			<img src="fish1.png" id="fish">
+		</div>
+		<div id="nav">
+			<button id="btnStart">클릭하면 물고기가 움직여요.</button>
+		</div>
+	</div>
+</body>
+</html>

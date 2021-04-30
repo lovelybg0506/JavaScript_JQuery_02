@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+	font-size:9pt;
+}
+#info{
+	width:400px;
+	border:1px solid #000000;
+}
+</style>
+<script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+/*
+ * 버튼 클릭 이벤트처리
+ */
+	$(document).ready(function(){
+		$("#btn1").on("click",function(){
+			alert("안녕하세요-jQuery!!")
+		})
+	});
+</script>
+</head>
+<body>
+	<button id="btn1">버튼을 클릭하세요.</button>
+	
+	<br>
+</body>
+</html>

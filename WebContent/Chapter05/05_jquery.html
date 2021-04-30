@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+	font-size:9pt;
+}
+#panel{
+	width:600px;
+	height:300px;
+	border:1px solid #999;
+	position:relative;
+}
+#bar{
+	position:absolute;
+	left:50px;
+	top:190px;
+	width:500px;
+	height:20px;
+	background:#F30;
+}
+#fish{
+	position:absolute;
+	left:50px;
+	top:120px;
+}
+#nav{
+	text-align:center;
+	width:600px;
+}
+</style>
+<script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
+<!--  버튼 클릭 물고기 왼쪽에서 오른쪽으로 움직이기  -->
+<script type="text/javascript">
+	$(document).ready(function(){
+		var fish=$("#fish");
+		$("#btnStart").click(function(){
+			fish.animate({
+				left:430	// 거리(어디까지 움직일것인가)
+			},5000); // (1000 = 1초) 동안 움직인다 , 즉 5초동안 430까지의 거리를 간다.
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<div id="panel">
+			<div id="bar"></div>
+			<img src="fish1.png" id="fish">
+		</div>
+		<div id="nav">
+			<button id="btnStart">클릭하면 물고기가 움직여요.</button>
+		</div>
+	</div>
+</body>
+</html>

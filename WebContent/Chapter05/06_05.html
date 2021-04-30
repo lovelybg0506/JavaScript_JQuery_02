@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){ // append 추가하다
+		//var count=0;
+		$("#add").click(function(){
+			var count=0;
+			count++;
+			$("#menu").append("<li>newmenu"+count+"</li>");
+		})
+	});
+</script>
+</head>
+<body>
+	<button id="add">메뉴추가</button>
+	<ul id="menu">
+		<li>menu</li>
+	</ul>
+</body>
+</html>

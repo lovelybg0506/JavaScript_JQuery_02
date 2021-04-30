@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+	font-size:9pt;
+}
+#info{
+	width:400px;
+	border:1px solid #000000;
+}
+</style>
+<script type="text/javascript">
+/*
+ * 버튼 클릭 메시지처리
+ */
+	window.onload=function(){
+		var btn1=window.document.getElementById("btn1");
+		
+		// 크로스 브라우징 처리
+		if(btn1.attachEvent){ // 마이크로소프트사 Internet Explorer 구버전에서도 동작하는 코드
+			btn1.attachEvent("onclick",function(){
+				alert("안녕하세요.");
+			})
+		}else{
+			btn1.addEventListener("click",function(){ // 얘가 실행됨.
+				alert("안녕하세요-2.")
+			});
+		}
+	}
+</script>
+</head>
+<body>
+	<button id="btn1">버튼을 클릭하세요.</button>
+	
+	<br>
+</body>
+</html>

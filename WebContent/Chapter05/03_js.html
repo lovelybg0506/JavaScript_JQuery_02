@@ -25,18 +25,21 @@ li.select {
 </style>
 <script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
-	
-	//  아이디가 header인 노드를 찾아 border를 4px solid #f00으로 변경
-	 
-  window.onload=function(){
-	 var a = document.getElementById("header");
-	 a.style.border = "4px solid #f00"
-	 } 
-	 
-/* 	$(document).ready(function() {
-		$(header).css("border", "4px solid red");
-	}); */
-	 
+	//  문서 내용중 div의 자식 p요소중 클래스 test2가 적용된 요소를 모두 찾아 border를 4px solid #f00으로 변경
+
+	window.onload=function(){
+		var data2List=document.getElementsByClassName("test2");
+		for(var i=0; i<data2List.length; i++){
+			var data2 = data2List[i];
+			
+			if(data2.tagName == "P"){ // 크롬에서는 소문자 태그네임을 쓰면 인식하지못한다?
+				if(data2.parentNode.tagName == "DIV"){ // 태그네임 대문자로 바꾸면 인식함.
+					data2.style.border="4px solid #f00";
+				}
+			}
+		}
+	}
+ 
 </script>
 </head>
 <body>

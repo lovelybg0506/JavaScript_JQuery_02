@@ -6,9 +6,9 @@
 <script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){ // append 추가하다
-		//var count=0;
+		var count=0; // 여기에 변수를 초기화시켜놓으면 (전역변수), count수가 계속 늘어남
 		$("#add").click(function(){
-			var count=0;
+			//var count=0; 여기에 변수를 초기화시켜놓으면 count 수가 1번만 증가하고 그것만 반복됨,
 			count++;
 			$("#menu").append("<li>newmenu"+count+"</li>");
 		})

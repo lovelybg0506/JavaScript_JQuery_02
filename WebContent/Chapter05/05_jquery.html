@@ -37,10 +37,15 @@ body{
 	$(document).ready(function(){
 		var fish=$("#fish");
 		$("#btnStart").click(function(){
-			fish.animate({
-				left:430	// 거리(어디까지 움직일것인가)
+			fish.animate({ // (fish변수에는 이미지가 들어있다 )
+				left:430	// 거리(어디까지 움직일것인가) left -> right로 바꾸면 안움직인다 ??? [좌,우가 아닌 남은 거리를 뜻하는 것일수도??]
 			},5000); // (1000 = 1초) 동안 움직인다 , 즉 5초동안 430까지의 거리를 간다.
 		});
+	});
+	
+	$(document).ready(function(){
+		var fish=$("#fish");
+		$()
 	});
 </script>
 </head>

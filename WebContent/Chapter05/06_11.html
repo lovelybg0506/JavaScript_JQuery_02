@@ -25,12 +25,12 @@ li.select {
 <script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	
-	// ul.menu 의 메뉴 노드(li)중 두 번째 메뉴노드의 border속성을 "4px solid #f00"으로 변경
+	// 
 	$(document).ready(function() {
 		var $liList = $("ul.menu li");
-		var $li_1 = $liList.eq(1);	// 선택한 요소의 인덱스 번호에 해당하는 요소를 찾습니다.
-		$li_1.css("border","4px solid #f00");
-	});	// 문법 :  $("선택자").eq("숫자");
+		var li_1 = $liList.get(1); // get을 사용하면 내부적으로는 JQuery가 처리하는게 아니고  HTMLElement DOM 이 처리한다
+		li_1.style.border="4px solid #f00";
+	});
 	 
 </script>
 </head>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.tab-menu{
+	list-style:none;
+	height:80px;
+}
+
+.tab-menu li{
+	width:99px;
+	height:40px;
+	background-position-y:0;
+	text-indent:-1000px;
+	overflow:hidden;
+	display:inline-block;
+	float:left;
+}
+
+.tab-menu li:hover{
+	background-position-y:-40px;
+}
+
+.tab-menu li.select{
+	background-position-y:-80px;
+	height:80px;
+}
+
+.tab-menu li.menuitem1{
+	background-image:url(../images/newbtn.bar.1.png);
+}
+.tab-menu li.menuitem2{
+	background-image:url(../images/newbtn.bar.2.png);
+}
+.tab-menu li.menuitem3{
+	background-image:url(../images/newbtn.bar.3.png);
+}
+.tab-menu li.menuitem4{
+	background-image:url(../images/newbtn.bar.4.png);
+}
+.tab-menu li.menuitem5{
+	background-image:url(../images/newbtn.bar.5.png);
+}
+.tab-menu li.menuitem6{
+	background-image:url(../images/newbtn.bar.6.png);
+}
+</style>
+<script type="text/javascript" src="../../libs/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		alert("length="+$("#tabMenu1 li").length);
+	});
+</script>
+</head>
+<body>
+	<ul class="tab-menu" id="tabMenu1">
+		<li class="menuitem1">google</li>
+		<li class="menuitem2">facebook</li>
+		<li class="menuitem3">printerest</li>
+		<li class="menuitem4">twitter</li>
+		<li class="menuitem5">airbnb</li>
+		<li class="menuitem6">path</li>
+	</ul>
+</body>
+</html>

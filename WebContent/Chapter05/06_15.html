@@ -25,12 +25,14 @@ li.select {
 <script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	
-	// ul.menu 의 메뉴 노드(li)중 두 번째 메뉴노드의 border속성을 "4px solid #f00"으로 변경
+	// 2px 4px 6px 8px
 	$(document).ready(function() {
-		var $liList = $("ul.menu li");
-		var $li_1 = $liList.eq(1);	// 선택한 요소의 인덱스 번호에 해당하는 요소를 찾습니다.
-		$li_1.css("border","4px solid #f00");
-	});	// 문법 :  $("선택자").eq("숫자");
+		var $liList=$("ul.menu li");
+		$liList.each(function(index){	// 0,1,2,3
+			var borderpx = (index+1)*2;
+			$(this).css("border",borderpx+"px solid #f00");
+		});
+	});
 	 
 </script>
 </head>
@@ -42,10 +44,10 @@ li.select {
 			노드 찾기(div, id=content, class=sample-content)
 			<ul class="menu">
 				일반 노드 찾기(ul, class=menu)
-				<li data-value="1">id로 찾기(li, data-value=1)</li>
-				<li class="select">tag로 찾기(li, class=select)</li>
-				<li data-value="2">class로 찾기(li, data-value=2)</li>
-				<li class="test1">속성으로 찾기(li, class=test1)</li>
+				<li data-value="1">id로 찾기(li, data-value=1)</li><br>
+				<li class="select">tag로 찾기(li, class=select)</li><br>
+				<li data-value="2">class로 찾기(li, data-value=2)</li><br>
+				<li class="test1">속성으로 찾기(li, class=test1)</li><br>
 			</ul>
 			<div class="content-data">
 				자식노드 찾기(div, class=content-data)

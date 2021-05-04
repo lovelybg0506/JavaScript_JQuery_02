@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body{
+		font-size:9pt;
+		font-family:"굴림";
+	}
+	ul.menu{
+		padding:10px;
+		list-style:none;
+		border:1px #000 solid;
+	}
+	ul.menu li{
+		border:1px #eeeeee solid;
+		margin:10px;
+	}
+	li.select{
+		background-color:#ccc;
+	}
+</style>
+<script type="text/javascript" src="../../libs/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+/*
+ * 
+ */
+ 	// 전역변수
+	var $menu=null;
+	var $menuName=null;
+	
+	$(document).ready(function(){
+		init();
+		initEvent();
+	});
+	
+	// 초기화 (init)
+	function init(){
+		$menu=$("ul.menu");
+		$menuName=$("#menuName");
+	}
+	
+	// 이벤트 초기화
+	function initEvent(){
+		$("#add").click(function(){
+			addMenu();
+		});
+	}
+	
+	// 메뉴 추가
+	function addMenu(){
+		var menuName=$menuName.val();
+		var newMenuItem="<li>"+menuName+"</li>";
+		$menu.append(newMenuItem);
+	}
+</script>
+</head>
+<body>
+	<div>
+		<input type="text" id="menuName">
+		<button id="add">추가</button>
+		<button id="update">수정</button>
+		<button id="remove">삭제</button>
+		<button id="up">UP</button>
+		<button id="down">DOWN</button>
+	</div>
+	<ul class="menu">
+		
+	</ul>
+</body>
+</html>

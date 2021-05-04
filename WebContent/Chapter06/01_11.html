@@ -22,17 +22,13 @@
 <script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 /*
- * 노드 생성 , JavaScript
+ * 자기자신이 눌리면 맨밑으로 내려감.
  */
 	$(document).ready(function(){
-		var count=0;
-		$("#btnAdd").click(function(){
-			count++;
-			var newLI=document.createElement("li");
-			var liText=document.createTextNode("new menu"+count);
-			newLI.appendChild(liText);
-			
-			console.log(newLI);
+
+		$("ul.menu li").click(function(){
+			$("ul.menu").append(this);
+
 		});
 	});
 </script>

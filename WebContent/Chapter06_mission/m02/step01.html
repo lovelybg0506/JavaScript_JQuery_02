@@ -8,12 +8,14 @@
 		font-size:9pt;
 		font-family:"굴림";
 	}
-	div,p,ul,li{
+	ul.menu{
+		padding:10px;
+		list-style:none;
+		border:1px #000 solid;
+	}
+	ul.menu li{
 		border:1px #eeeeee solid;
 		margin:10px;
-	}
-	ul{
-		padding:10px;
 	}
 	li.select{
 		background-color:#ccc;
@@ -22,30 +24,26 @@
 <script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 /*
- * 노드 생성 , JavaScript
+ * 
  */
+	var $menu=null;
+	var $menuName=null;
 	$(document).ready(function(){
-		var count=0;
-		$("#btnAdd").click(function(){
-			count++;
-			var newLI=document.createElement("li");
-			var liText=document.createTextNode("new menu"+count);
-			newLI.appendChild(liText);
-			
-			console.log(newLI);
-		});
+		
 	});
 </script>
 </head>
 <body>
-	<button id="btnAdd">추가</button>
+	<div>
+		<input type="text" id="menuName">
+		<button id="add">추가</button>
+		<button id="update">수정</button>
+		<button id="remove">삭제</button>
+		<button id="up">UP</button>
+		<button id="down">DOWN</button>
+	</div>
 	<ul class="menu">
-		<li>menu1</li>
-		<li>menu2</li>
-		<li class="select">menu3</li>
-		<li>menu4</li>
-		<li>menu5</li>
-		<li>menu6</li>
+		
 	</ul>
 </body>
 </html>

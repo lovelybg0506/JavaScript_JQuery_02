@@ -22,17 +22,14 @@
 <script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 /*
- * 노드 생성 , JavaScript
+ * class=select 앞에 자식 노드로 추가
  */
 	$(document).ready(function(){
 		var count=0;
 		$("#btnAdd").click(function(){
 			count++;
-			var newLI=document.createElement("li");
-			var liText=document.createTextNode("new menu"+count);
-			newLI.appendChild(liText);
-			
-			console.log(newLI);
+//			$("<li>new menu"+count+"</li>").insertBefore("ul.menu li.select");  // class=select 앞에 자식 노드로 추가
+			$("ul.menu li.select").before("<li>new menu"+count+"</li>"); // 위와 동일한 효과
 		});
 	});
 </script>

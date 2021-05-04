@@ -22,17 +22,15 @@
 <script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 /*
- * 노드 생성 , JavaScript
+ * 특정 노드(고정)의 이전 노드로 이동
  */
 	$(document).ready(function(){
-		var count=0;
-		$("#btnAdd").click(function(){
-			count++;
-			var newLI=document.createElement("li");
-			var liText=document.createTextNode("new menu"+count);
-			newLI.appendChild(liText);
+		var $menu=$("ul.menu");
+		$("ul.menu li").click(function(){
+		
+//		$(this).insertBefore($(".select"));//현재 클릭된 대상은 .select를 기준으로 앞에 삽입해라
+		$(this).insertAfter($(".select"));// 위와 반대상황
 			
-			console.log(newLI);
 		});
 	});
 </script>

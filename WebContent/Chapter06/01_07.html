@@ -22,17 +22,13 @@
 <script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 /*
- * 노드 생성 , JavaScript
+ * 마지막번째 자식 노드로 추가
  */
 	$(document).ready(function(){
 		var count=0;
 		$("#btnAdd").click(function(){
 			count++;
-			var newLI=document.createElement("li");
-			var liText=document.createTextNode("new menu"+count);
-			newLI.appendChild(liText);
-			
-			console.log(newLI);
+			$("ul.menu").append("<li>new menu"+count+"</li>");
 		});
 	});
 </script>

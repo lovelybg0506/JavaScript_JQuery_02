@@ -22,23 +22,22 @@
 <script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 /*
- * 노드 생성 , JavaScript
+ * 노드의 내부구조
  */
 	$(document).ready(function(){
-		var count=0;
-		$("#btnAdd").click(function(){
-			count++;
-			var newLI=document.createElement("li");
-			var liText=document.createTextNode("new menu"+count);
-			newLI.appendChild(liText);
 			
-			console.log(newLI);
+		$("#ok").click(function(){
+			//console.log($(".menu").html()); // .html() : html의 구조를 보여준다.
+			//console.log($(".menu").text()); // .text() : text만 보여준다. (menu1, menu2...)
+			
+			//$(".menu").html(""); // 자식태그들이 다 지워진다
+			$("ul.menu li").remove();// 위와동일
 		});
 	});
 </script>
 </head>
 <body>
-	<button id="btnAdd">추가</button>
+	<button id="ok">확인</button>
 	<ul class="menu">
 		<li>menu1</li>
 		<li>menu2</li>

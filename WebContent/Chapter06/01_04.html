@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body{
+		font-size:9pt;
+		font-family:"굴림";
+	}
+	div,p,ul,li{
+		border:1px #eeeeee solid;
+		margin:10px;
+	}
+	ul{
+		padding:10px;
+	}
+	li.select{
+		background-color:#ccc;
+	}
+</style>
+<script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+/*
+ * 노드 생성
+ */
+	$(document).ready(function(){
+		var count=0;
+		$("#btnAdd").click(function(){
+			count++;
+			var $newItem = $("<li>new menu"+count+"</li>");
+			$("ul.menu").prepend($newItem);
+		});
+	});
+</script>
+</head>
+<body>
+	<button id="btnAdd">추가</button>
+	<ul class="menu">
+		<li>menu1</li>
+		<li>menu2</li>
+		<li class="select">menu3</li>
+		<li>menu4</li>
+		<li>menu5</li>
+		<li>menu6</li>
+	</ul>
+</body>
+</html>

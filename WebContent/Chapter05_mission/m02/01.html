@@ -19,6 +19,10 @@
 	float:left;
 }
 
+.tab-menu li:hover{
+	background-position-y:-40px;
+}
+
 .tab-menu li.select{
 	background-position-y:-80px;
 	height:80px;
@@ -46,15 +50,18 @@
 <script type="text/javascript" src="../../libs/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		alert("length="+$("#tabMenu1 li").length);
-	});
+		$(".tab-menu li").click(function(){
+			alert("index : " + $(this).index());
+		});
+	}); 
+	// click, alert, this, index
 </script>
 </head>
 <body>
 	<ul class="tab-menu" id="tabMenu1">
 		<li class="menuitem1">google</li>
 		<li class="menuitem2">facebook</li>
-		<li class="menuitem3">printerest</li>
+		<li class="menuitem3">pinterest</li>
 		<li class="menuitem4">twitter</li>
 		<li class="menuitem5">airbnb</li>
 		<li class="menuitem6">path</li>

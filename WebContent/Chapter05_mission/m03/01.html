@@ -50,8 +50,19 @@
 <script type="text/javascript" src="../../libs/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		alert("length="+$("#tabMenu1 li").length);
-	});
+		var currentIndex=0;
+		var $menuItems=$("#tabMenu1 li");
+		
+		var timerID=setInterval(function(){
+			var $item = $menuItems.eq(currentIndex);
+			$item.addClass("select");
+			currentIndex++;			
+			if(currentIndex >= $menuItems.length)
+			clearInterval(timerID);
+			console.log("currentIndex "+currentIndex);
+		},1000);
+	}); 
+	// click, alert, this, index
 </script>
 </head>
 <body>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link type="text/css" rel="stylesheet" href="common.css"> <!-- 이렇게 css파일 경로 지정 해줘야한다. -->
+<style type="text/css">
+	div{
+		margin:30px;
+		padding:30px;
+		font-size:24px;
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var content=document.getElementById("test1");
+		console.log("1. color=",content.style.color); // 결과값 : rgb를 알수있다. ,  (inline)
+		console.log("2. border=",content.style.border); // 결과값 : null ,  (block)
+		console.log("3. border=",window.getComputedStyle(content).border); // 결과값 : 1px solid rgb(255,0,0)
+	}
+</script>
+</head>
+<body>
+	<div id="test1" class="content" style="color:#f00">
+		스타일 다루기 테스트 입니다.
+	</div>
+</body>
+</html>

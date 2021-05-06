@@ -58,7 +58,11 @@
 	function addMenu(){
 		var menuName=$menuName.val();
 		var newMenuItem="<li>"+menuName+"</li>";
-		$menu.append(newMenuItem);
+		if($selectedItem){
+			$selectedItem.after(newMenuItem);
+		}else{
+			$menu.append(newMenuItem);
+		}
 	}
 	
 	function selectItem($item){

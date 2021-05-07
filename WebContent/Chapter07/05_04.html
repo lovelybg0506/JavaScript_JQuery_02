@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+	font-size:9pt;
+	font-family:"굴림";
+}
+ul.menu{
+	padding:10px;
+	list-style:none;
+	border:1px #000 solid;
+}
+ul.menu li{
+	border:1px #eeeeee solid;
+	margin:10px;
+}
+li.select{
+	background-color:#ccc;
+}
+</style>
+<script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+/*
+ * 실행(#test)버튼을 누를 때 마다 각 메뉴 아이템(li)의 글자 크기를 5px씩 증가시킴, 단 처음 li 크기는 11부터 시작
+ */
+	$(document).ready(function(){
+		$("#test").click(function(){
+			var size=11;
+		$("ul.menu li").each(function(index){
+				$(this).css({fontSize:size})
+				size+=5;
+			});
+			
+		});
+	});
+</script>
+</head>
+<body>
+	<button id="test">실행</button>
+	<ul class="menu">
+		<li>menu1</li>
+		<li>menu2</li>
+		<li class="select">menu3</li>
+		<li>menu4</li>
+		<li>menu5</li>
+	</ul>
+</body>
+</html>

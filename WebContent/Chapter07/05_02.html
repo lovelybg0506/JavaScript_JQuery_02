@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+	font-size:9pt;
+	font-family:"굴림";
+}
+ul.menu{
+	padding:10px;
+	list-style:none;
+	border:1px #000 solid;
+}
+ul.menu li{
+	border:1px #eeeeee solid;
+	margin:10px;
+}
+li.select{
+	background-color:#ccc;
+}
+</style>
+<script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var info=$("ul.menu").css(["width","height"]);
+		console.log("width="+info.width+",height="+info.height); // 폭과 높이를 알려준다.
+	});
+</script>
+</head>
+<body>
+	<ul class="menu">
+		<li>menu1</li>
+		<li>menu2</li>
+		<li class="select">menu3</li>
+		<li>menu4</li>
+		<li>menu5</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+	font-size:9pt;
+	font-family:"굴림";
+}
+ul.menu{
+	padding:10px;
+	list-style:none;
+	border:1px #000 solid;
+}
+ul.menu li{
+	border:1px #eeeeee solid;
+	margin:10px;
+}
+ul.menu li.select{
+	background-color:#ccc;
+	color:#f00;
+	font-size:20px;
+}
+ul.menu li.border{
+	border:4px solid #f00;	
+}
+ul.menu li.black-bg{
+	background-color:#000;
+	color:#fff;
+}
+</style>
+<script type="text/javascript" src="../libs/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+/*
+ * 제거버튼(#remove)을 누르면 메뉴 항목에 설정되어 있는 클래스를 모두 제거
+ */
+	$(document).ready(function(){
+		$("#remove").click(function(){
+			$("ul.menu li").each(function(){
+			$(this).removeClass();
+			});				
+		});
+	});
+</script>
+</head>
+<body>
+	<button id="remove">제거</button>
+	<ul class="menu">
+		<li class="select border">menu1</li>
+		<li>menu2</li>
+		<li class="border">menu3</li>
+		<li class="select">menu4</li>
+		<li class="select border black-bg">menu5</li>
+	</ul>
+</body>
+</html>
